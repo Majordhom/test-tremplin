@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS maquette_db_dev;
+
+USE maquette_db_dev;
+
+CREATE TABLE IF NOT EXISTS contact (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  gender VARCHAR(20) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  lastName VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(30) NOT NULL,
+  reason VARCHAR(100) NOT NULL,
+  message TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS availability (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  contact_id INT NOT NULL,
+  slot VARCHAR(50) NOT NULL,
+  FOREIGN KEY (contact_id) REFERENCES contact(id) ON DELETE CASCADE
+);

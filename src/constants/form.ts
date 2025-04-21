@@ -4,12 +4,12 @@ export const genderCheckBoxData: multipleCheckBoxType[] = [
     {
         id: "female",
         label: "Mme",
-        value: "female"
+        value: "Mme"
     },
     {
         id: "male",
         label: "M",
-        value: "male"
+        value: "M"
     }
 ];
 

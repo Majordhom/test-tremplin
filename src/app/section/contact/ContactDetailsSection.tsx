@@ -15,7 +15,7 @@ export default function ContactDetailsSection({handleChange} : {handleChange: (i
                 <TextField id="name" label="Nom" callback={handleChange}/>
                 </div>
                 <div className="row-start-2 col-span-2">
-                <TextField id="familyName" label="Prénom" callback={handleChange}/>
+                <TextField id="lastName" label="Prénom" callback={handleChange}/>
                 </div>
                 <div className="row-start-3 col-span-full">
                 <TextField id="email" label="Adresse mail" type="email" callback={handleChange}/>

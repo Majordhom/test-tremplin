@@ -28,7 +28,7 @@ export default function AvailabilitySection({handleChange} : {handleChange: (id:
             if (availabilityList.every((availability)=>JSON.stringify(availability) != JSON.stringify(newAvailability))) {
                 const newAvailabilityList = [...availabilityList, newAvailability];
                 setAvailabilityList(newAvailabilityList);
-                handleChange("availability",newAvailabilityList);
+                handleChange("availabilities", newAvailabilityList);
             }
         }
     }
@@ -36,7 +36,7 @@ export default function AvailabilitySection({handleChange} : {handleChange: (id:
     const removeAvailability = (availableIndex: number) => {
         const newAvailabilityList = availabilityList.filter((available, index)=>availableIndex != index);
         setAvailabilityList(newAvailabilityList);
-        handleChange("availability",newAvailabilityList);
+        handleChange("availabilities",newAvailabilityList);
     }
 
     return (

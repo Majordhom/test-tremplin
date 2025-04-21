@@ -13,10 +13,16 @@ export interface AvailabilityVisitType {
 export interface ContactFormValues {
     gender: string,
     name: string,
-    familyName: string,
+    lastName: string,
     email: string,
     phone: string,
-    availability: AvailabilityVisitType[],
+    availabilities: AvailabilityVisitType[],
     reason: string,
     message: string    
+}
+
+export interface FormDisplayUiStates {
+    errorText: boolean,
+    disableButton: boolean,
+    msgBox: boolean
 }
